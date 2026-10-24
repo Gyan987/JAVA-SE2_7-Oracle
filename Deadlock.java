@@ -21,11 +21,11 @@ class Deadlock{
         Thread thread2=new Thread(new Runnable(){
             public void run(){
                 synchronized(suit){
-                    System.out.println("Thread 1: Holding suit...");
+                    System.out.println("Thread 2: Holding suit...");
                     try{Thread.sleep(100);}catch(Exception e){}
-                    System.out.println("Thread 1: Waiting for shield...");
+                    System.out.println("Thread 2: Waiting for shield...");
                     synchronized(shield){
-                        System.out.println("Thread 1: Holding suit and shield...");
+                        System.out.println("Thread 2: Holding suit and shield...");
                     }
                 }
             }
