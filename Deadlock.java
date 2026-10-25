@@ -3,7 +3,7 @@ class Deadlock{
     static final Object shield=new Object();
 
     public static void main(String[] args){
-
+ 
         //Thread 1
         Thread thread1=new Thread(new Runnable(){
             public void run(){
